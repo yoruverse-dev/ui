@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Geist Variable', sans-serif;
+  --font-mono: 'Geist Mono', sans-serif;
+}
+
+@layer base{
+  body {
+    @apply font-sans;
+  }
+}
