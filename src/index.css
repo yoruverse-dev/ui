@@ -5,6 +5,7 @@
   --font-mono: 'Geist Mono', sans-serif;
 }
 
+
 @layer base{
   body {
     @apply font-sans;
