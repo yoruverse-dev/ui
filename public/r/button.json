@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:component",
+  "title": "Button",
+  "description": "A button component that can be used to trigger actions.",
+  "dependencies": [
+    "motion",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "files": [
+    {
+      "path": "registry/components/button.tsx",
+      "content": "import { HTMLMotionProps, motion } from 'motion/react';\r\nimport { cn } from '../../src/lib/utils/cn';\r\n\r\ntype Props = {\r\n    color?: 'primary' | 'brand' | 'danger';\r\n    variant?: 'solid' | 'outline' | 'ghost';\r\n    onlyIcon?: boolean;\r\n} & HTMLMotionProps<'button'>;\r\n\r\nexport function Button({ color = 'brand', variant = 'solid', onlyIcon, className, children, ...props }: Props) {\r\n    return (\r\n        <motion.button\r\n            className={cn(\r\n                'flex items-center justify-center',\r\n                'h-9 px-5',\r\n                'rounded-xl cursor-pointer transition-colors',\r\n                'font-medium text-sm',\r\n                color === 'brand' && (\r\n                    variant === 'outline' ? 'bg-white outline outline-indigo-600 hover:outline-indigo-700 text-indigo-600 hover:text-indigo-700' :\r\n                        variant === 'ghost' ? 'bg-white text-indigo-600 hover:text-indigo-700' :\r\n                            variant === 'solid' && 'bg-indigo-600 hover:bg-indigo-700 text-white'),\r\n                color === 'danger' && (\r\n                    variant === 'outline' ? 'bg-white outline outline-rose-600 hover:outline-rose-700 text-rose-600 hover:text-rose-700' :\r\n                        variant === 'ghost' ? 'bg-white text-rose-600 hover:text-rose-700' :\r\n                            variant === 'solid' && 'bg-rose-600 hover:bg-rose-700 text-white'),\r\n                color === 'primary' && (\r\n                    variant === 'outline' ? 'bg-white outline outline-zinc-900 hover:outline-zinc-800 text-zinc-900 hover:text-zinc-800' :\r\n                        variant === 'ghost' ? 'bg-white text-zinc-900 hover:text-zinc-800' :\r\n                            variant === 'solid' && 'bg-zinc-900 hover:bg-zinc-800 text-white'),\r\n                onlyIcon && 'px-0 w-9',\r\n                className\r\n            )}\r\n            {...props}\r\n        >\r\n            {children}\r\n        </motion.button>\r\n    );\r\n}",
+      "type": "registry:component"
+    }
+  ]
+}

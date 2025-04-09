@@ -13,7 +13,7 @@ export function Button({ color = 'brand', variant = 'solid', onlyIcon, className
             className={cn(
                 'flex items-center justify-center',
                 'h-9 px-5',
-                'rounded-xl cursor-pointer',
+                'rounded-xl cursor-pointer transition-colors',
                 'font-medium text-sm',
                 color === 'brand' && (
                     variant === 'outline' ? 'bg-white outline outline-indigo-600 hover:outline-indigo-700 text-indigo-600 hover:text-indigo-700' :

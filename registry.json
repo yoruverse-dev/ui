@@ -1,0 +1,24 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "yoruverse",
+    "homepage": "https://design.yoruverse.com",
+    "items": [
+        {
+            "name": "button",
+            "type": "registry:component",
+            "title": "Button",
+            "description": "A button component that can be used to trigger actions.",
+            "dependencies": [
+                "motion",
+                "clsx",
+                "tailwind-merge"
+            ],
+            "files": [
+                {
+                    "path": "registry/components/button.tsx",
+                    "type": "registry:component"
+                }
+            ]
+        }
+    ]
+}
