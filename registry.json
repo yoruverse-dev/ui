@@ -1,7 +1,7 @@
 {
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "yoruverse",
-    "homepage": "https://design.yoruverse.com",
+    "homepage": "https://ui.yoruverse.com",
     "items": [
         {
             "name": "button",
